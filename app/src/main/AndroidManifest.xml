@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Recipe">
         <activity
+            android:name=".saladActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mainCourseMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dessertMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".breakMenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
