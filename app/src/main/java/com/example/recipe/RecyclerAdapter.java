@@ -18,15 +18,14 @@ import java.util.ArrayList;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     Context context;
     String[] data;
-    ImageView[] images;
-    int[] pos;
-    //tomorrow: try with an int array
+    //ImageView[] images;
+    int[] images; // infact the easiest way is strangely with an int array
    // ArrayList list;
 
     public RecyclerAdapter(Context context, String[] data, int[] images){
         this.context = context;
         this.data = data;
-        this.pos = images;
+        this.images = images;
        // this.list = list;
     }
 
@@ -44,12 +43,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.textView.setText(data[position]);
-        holder.imageView.setImageResource(pos[position]);
+        holder.imageView.setImageResource(images[position]);
         //holder.textView.setText(data[position]);
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "clicked on this "+data[position], Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "clicked on this "+data[position], Toast.LENGTH_SHORT).show();
             }
         });
     }

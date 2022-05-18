@@ -9,64 +9,58 @@
 
     <ImageButton
         android:id="@+id/breakMenu"
-        android:layout_width="320dp"
-        android:layout_height="106dp"
+        android:layout_width="353dp"
+        android:layout_height="120dp"
         android:background="@drawable/rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.223"
+        app:layout_constraintVertical_bias="0.232"
         app:srcCompat="@drawable/breakfast_choice"
 
 
         />
 
     <ImageButton
-        android:id="@+id/saladMenu"
-        android:layout_width="320dp"
-        android:layout_height="106dp"
+        android:id="@+id/dessertMenu"
+        android:layout_width="353dp"
+        android:layout_height="120dp"
         android:background="@drawable/rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464"
-        app:srcCompat="@drawable/salad_choice"
+        app:layout_constraintVertical_bias="0.971"
 
 
-        />
+        app:srcCompat="@drawable/dessert_choice" />
 
     <ImageButton
         android:id="@+id/mainCourseMenu"
-        android:layout_width="320dp"
-        android:layout_height="106dp"
+        android:layout_width="353dp"
+        android:layout_height="120dp"
         android:background="@drawable/rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
+
+
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705"
-        app:srcCompat="@drawable/main_choice"
-
-
-        />
+        app:layout_constraintVertical_bias="0.728"
+        app:srcCompat="@drawable/main_choice" />
 
     <ImageButton
-        android:id="@+id/dessertMenu"
-        android:layout_width="320dp"
-        android:layout_height="106dp"
+        android:id="@+id/saladMenu"
+        android:layout_width="353dp"
+        android:layout_height="120dp"
         android:background="@drawable/rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945"
-        app:srcCompat="@drawable/dessert_choice"
+        app:layout_constraintVertical_bias="0.477"
+        app:srcCompat="@drawable/salad_choice"
 
 
         />
