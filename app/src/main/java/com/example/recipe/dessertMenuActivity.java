@@ -4,9 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-public class dessertMenuActivity extends AppCompatActivity {
+public class dessertMenuActivity extends AppCompatActivity implements RecyclerAdapter.ClickedActivityFunction{
 
     RecyclerView recyclerView;
     RecyclerAdapter recyclerAdapter;
@@ -16,11 +17,54 @@ public class dessertMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dessert_menu);
-
+        RecyclerAdapter.ClickedActivityFunction clicked = new RecyclerAdapter.ClickedActivityFunction() {
+            @Override
+            public void onClickedPic(int index) {
+                Intent mIntent;
+                switch (index) {
+                    case 0: //first item in Recycler view
+                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        startActivity(mIntent);
+                        break;
+                    case 1: //second item in Recycler view
+                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        startActivity(mIntent);
+                        break;
+                    case 2: //third item in Recycler view
+                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        startActivity(mIntent);
+                        break;
+                    default:
+                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        startActivity(mIntent);
+                }
+            }
+        };
         recyclerView = findViewById(R.id.recycleView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        recyclerAdapter = new RecyclerAdapter(this, foodNames, images);
+        recyclerAdapter = new RecyclerAdapter(this, foodNames, images,clicked);
         recyclerView.setAdapter(recyclerAdapter);
+    }
+    @Override
+    public void onClickedPic(int index) {
+        Intent mIntent;
+        switch (index) {
+            case 0: //first item in Recycler view
+                mIntent = new Intent(getApplicationContext(), break1.class);
+                startActivity(mIntent);
+                break;
+            case 1: //second item in Recycler view
+                mIntent = new Intent(getApplicationContext(), break1.class);
+                startActivity(mIntent);
+                break;
+            case 2: //third item in Recycler view
+                mIntent = new Intent(getApplicationContext(), break1.class);
+                startActivity(mIntent);
+                break;
+            default:
+                mIntent = new Intent(getApplicationContext(), break1.class);
+                startActivity(mIntent);
+        }
     }
 }

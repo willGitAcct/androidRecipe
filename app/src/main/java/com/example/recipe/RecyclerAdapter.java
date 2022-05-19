@@ -2,6 +2,7 @@ package com.example.recipe;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,12 +21,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     String[] data;
     //ImageView[] images;
     int[] images; // infact the easiest way is strangely with an int array
-   // ArrayList list;
 
-    public RecyclerAdapter(Context context, String[] data, int[] images){
+   //this supports opening a different activity when clicking a picture
+   public interface ClickedActivityFunction {
+       void onClickedPic(int index);
+   }
+   ClickedActivityFunction clicked;
+
+
+    public RecyclerAdapter(Context context, String[] data, int[] images, ClickedActivityFunction clicked){
         this.context = context;
         this.data = data;
         this.images = images;
+        this.clicked = clicked;
        // this.list = list;
     }
 
@@ -39,7 +47,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         return viewHolder;
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.textView.setText(data[position]);
@@ -51,6 +58,28 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 Toast.makeText(context, "clicked on this "+data[position], Toast.LENGTH_SHORT).show();
             }
         });
+
+//        holder.imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                clicked.onClickedPic(0);
+////                final Intent intent;
+////                switch (position){
+////                    case 0:
+////                        intent =  new Intent(context, break1.class);
+////                        break;
+////
+////                    case 1:
+////                        intent =  new Intent(context, break1.class);
+////                        break;
+////
+////                    default:
+////                        intent =  new Intent(context, break1.class);
+////                        break;
+////                }
+////                context.startActivity(intent);
+//            }
+//        });
     }
 
     @Override
@@ -58,14 +87,27 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return data.length;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
         ImageView imageView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int newPosition = getAdapterPosition();
+                    clicked.onClickedPic(newPosition);
+                    Toast.makeText(context, "clicked on this "+data[newPosition], Toast.LENGTH_SHORT).show();
+
+
+                }
+            });
 
             textView = itemView.findViewById(R.id.title);
             imageView = itemView.findViewById(R.id.imageViews);
         }
     }
+
+
+
 }

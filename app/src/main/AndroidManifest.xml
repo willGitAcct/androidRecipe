@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Recipe">
         <activity
+            android:name=".break1"
+            android:exported="false" />
+        <activity
             android:name=".saladActivity"
             android:exported="false" />
         <activity
