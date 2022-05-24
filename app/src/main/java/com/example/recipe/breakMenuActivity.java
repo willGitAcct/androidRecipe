@@ -13,8 +13,8 @@ public class breakMenuActivity extends AppCompatActivity implements RecyclerAdap
 
     RecyclerView recyclerView;
     RecyclerAdapter recyclerAdapter;
-    String[] foodNames = {"Eggs n Bacon", "pfft pfft", "pfft pfft", "pfft pfft", "pfft pfft"};
-    int[] images = {R.drawable.breakfast_choice, R.drawable.dessert_choice, R.drawable.main_choice, R.drawable.salad_choice, R.drawable.dessert_choice};
+    String[] foodNames = {"Breakfast Smoothie Bowl", "Breakfast Burrito", "Egg n Bacon McMuffin", "Hearty Quinoa Bowl", "Quick Quiche"};
+    int[] images = {R.drawable.breakfast_choice, R.drawable.break_burrito, R.drawable.break_egg_bacon, R.drawable.break_quinoa_bowl, R.drawable.break_quiche};
 
 
     @Override
@@ -31,15 +31,19 @@ public class breakMenuActivity extends AppCompatActivity implements RecyclerAdap
                         startActivity(mIntent);
                         break;
                     case 1: //second item in Recycler view
-                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        mIntent = new Intent(getApplicationContext(), break2.class);
                         startActivity(mIntent);
                         break;
                     case 2: //third item in Recycler view
-                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        mIntent = new Intent(getApplicationContext(), break3.class);
+                        startActivity(mIntent);
+                        break;
+                    case 3:
+                        mIntent = new Intent(getApplicationContext(), break4.class);
                         startActivity(mIntent);
                         break;
                     default:
-                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        mIntent = new Intent(getApplicationContext(), break5.class);
                         startActivity(mIntent);
                 }
             }
@@ -55,26 +59,10 @@ public class breakMenuActivity extends AppCompatActivity implements RecyclerAdap
 
    @Override
     public void onClickedPic(int index) {
-        Intent mIntent;
-        switch (index) {
-            case 0: //first item in Recycler view
-                mIntent = new Intent(getApplicationContext(), break1.class);
-                startActivity(mIntent);
-                break;
-            case 1: //second item in Recycler view
-                mIntent = new Intent(getApplicationContext(), break1.class);
-                startActivity(mIntent);
-                break;
-            case 2: //third item in Recycler view
-                mIntent = new Intent(getApplicationContext(), break1.class);
-                startActivity(mIntent);
-                break;
-            default:
-                mIntent = new Intent(getApplicationContext(), break1.class);
-                startActivity(mIntent);
+
         }
     }
-}
+
     //    private void setImages(){
 //           images = {R.drawable.breakfast_choice, R.drawable.dessert_choice, R.drawable.main_choice, R.drawable.salad_choice};
 //

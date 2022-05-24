@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Recipe">
         <activity
+            android:name=".break5"
+            android:exported="false" />
+        <activity
+            android:name=".break4"
+            android:exported="false" />
+        <activity
+            android:name=".break3"
+            android:exported="false" />
+        <activity
+            android:name=".break2"
+            android:exported="false" />
+        <activity
             android:name=".break1"
             android:exported="false" />
         <activity
