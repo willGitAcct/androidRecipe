@@ -11,8 +11,8 @@ public class dessertMenuActivity extends AppCompatActivity implements RecyclerAd
 
     RecyclerView recyclerView;
     RecyclerAdapter recyclerAdapter;
-    String[] foodNames = {"Eggs n Bacon", "pfft pfft", "pfft pfft","pfft pfft","pfft pfft"};
-    int[] images = {R.drawable.breakfast_choice, R.drawable.dessert_choice, R.drawable.main_choice, R.drawable.salad_choice, R.drawable.dessert_choice};
+    String[] foodNames = {"Flan Dessert", "Flourless Peanut Butter Cookies", "Eclair Cake","Chocolate Brownies","Chocolate Chip Cookie Dough"};
+    int[] images = {R.drawable.dessert_choice, R.drawable.dessert_cookies, R.drawable.dessert_eclair, R.drawable.dessert_brownies, R.drawable.dessert_dough};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,19 +23,23 @@ public class dessertMenuActivity extends AppCompatActivity implements RecyclerAd
                 Intent mIntent;
                 switch (index) {
                     case 0: //first item in Recycler view
-                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        mIntent = new Intent(getApplicationContext(), dessert1.class);
                         startActivity(mIntent);
                         break;
                     case 1: //second item in Recycler view
-                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        mIntent = new Intent(getApplicationContext(), dessert2.class);
                         startActivity(mIntent);
                         break;
                     case 2: //third item in Recycler view
-                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        mIntent = new Intent(getApplicationContext(), dessert3.class);
+                        startActivity(mIntent);
+                        break;
+                    case 3:
+                        mIntent = new Intent(getApplicationContext(), dessert4.class);
                         startActivity(mIntent);
                         break;
                     default:
-                        mIntent = new Intent(getApplicationContext(), break1.class);
+                        mIntent = new Intent(getApplicationContext(), dessert5.class);
                         startActivity(mIntent);
                 }
             }
@@ -48,23 +52,6 @@ public class dessertMenuActivity extends AppCompatActivity implements RecyclerAd
     }
     @Override
     public void onClickedPic(int index) {
-        Intent mIntent;
-        switch (index) {
-            case 0: //first item in Recycler view
-                mIntent = new Intent(getApplicationContext(), break1.class);
-                startActivity(mIntent);
-                break;
-            case 1: //second item in Recycler view
-                mIntent = new Intent(getApplicationContext(), break1.class);
-                startActivity(mIntent);
-                break;
-            case 2: //third item in Recycler view
-                mIntent = new Intent(getApplicationContext(), break1.class);
-                startActivity(mIntent);
-                break;
-            default:
-                mIntent = new Intent(getApplicationContext(), break1.class);
-                startActivity(mIntent);
-        }
+
     }
 }
