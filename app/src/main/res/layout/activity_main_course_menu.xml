@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Salad Recipes"
+            android:text="Main Course Dishes"
             android:padding="8dp"
             android:textAlignment="center"
             android:id="@+id/title"

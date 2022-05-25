@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Recipe">
         <activity
+            android:name=".main5"
+            android:exported="false" />
+        <activity
+            android:name=".main4"
+            android:exported="false" />
+        <activity
+            android:name=".main3"
+            android:exported="false" />
+        <activity
+            android:name=".main2"
+            android:exported="false" />
+        <activity
+            android:name=".main1"
+            android:exported="false" />
+        <activity
             android:name=".salad5"
             android:exported="false" />
         <activity
