@@ -14,33 +14,34 @@ public class dessert4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dessert4);
-        recipeString = "BREAKFAST SMOOTHIE BOWL"
-                + "\n\n1/4 ripe avocado\n"
-                +"2 medium ripe bananas (previously sliced and frozen)\n"
-                +"1 cup fresh or frozen mixed berries (organic when possible // use strawberries/raspberries for a greener smoothie, darker berries for a purple smoothie)\n"
-                +"      2 large handfuls spinach (organic when possible)\n"
-                +"\n1 small handful kale (organic when possible // large stems removed)"
-                +"\n1 1/2 – 2 cups unsweetened non-dairy milk (DIY or store-bought – will depend on if your berries are frozen)"
-                +"\n1 Tbsp flaxseed meal"
-                +"\n2 Tbsp salted creamy almond or peanut butter (optional)"
-
-                +"\n\nTOPPINGS (optional)"
-
-                +"\nRoasted unsalted sunflower seeds"
-                +"\nGranola"
-                +"\nRaw or roasted nuts (almonds, pecans, walnuts, etc.)"
-                +"\nShredded unsweetened coconut"
-                +"\nFresh berries"
-                +"\nHemp seeds"
-
-                +"\n\nInstructions"
-
-                +"\nAdd all smoothie ingredients to a blender and blend until creamy and smooth. Add more almond milk (or water) to thin."
-                +"\nTaste and adjust flavor as needed, adding more ripe banana (or maple syrup) for added sweetness, more spinach for a bright green hue, or almond milk for creaminess."
-                +"\nFor the green smoothie, I used strawberries, which let the green color come through more. For the purple bowl, I used darker berries (raspberries, blackberries, blueberries)."
-                +"\nFor more protein, add nut butter! This also offsets / enhances the natural sweetness of the smoothie."
-                +"\nDivide between 2 serving bowls (as original recipe is written // adjust if altering batch size) and top with desired toppings!"
-                +"\nBest when fresh, though leftovers can be kept in jars in the fridge for up to 1-2 days.";
+        recipeString = "Quick Brownies\n\nIngredients\n" +
+                "20\n" +
+                "Original recipe yields 20 servings\n" +
+                "Ingredient Checklist\n" +
+                "\n" +
+                "    1 cup butter, melted\n" +
+                "    2 cups white sugar\n" +
+                "    ½ cup cocoa powder\n" +
+                "    1 teaspoon vanilla extract\n" +
+                "    4 eggs\n" +
+                "    1 ½ cups all-purpose flour\n" +
+                "    ½ teaspoon baking powder\n" +
+                "    ½ teaspoon salt\n" +
+                "    ½ cup walnut halves\n" +
+                "\n" +
+                "Directions\n" +
+                "Instructions Checklist\n" +
+                "\n" +
+                "    Step 1\n" +
+                "\n" +
+                "    Preheat the oven to 350 degrees F (175 degrees C). Grease a 9x13-inch pan.\n" +
+                "    Step 2\n" +
+                "\n" +
+                "    Combine the melted butter, sugar, cocoa powder, vanilla, eggs, flour, baking powder, and salt. Spread the batter into the prepared pan. Decorate with walnut halves, if desired.\n" +
+                "    Step 3\n" +
+                "\n" +
+                "    Bake in preheated oven for 20 to 30 minutes or until a toothpick inserted in the center comes out with crumbs, not wet. Cool on wire rack.\n" +
+                "\n";
         recipeText = (TextView) findViewById(R.id.recipeText);
         recipeText.setText(recipeString);
 

@@ -14,33 +14,38 @@ public class dessert2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dessert2);
-        recipeString = "BREAKFAST SMOOTHIE BOWL"
-                + "\n\n1/4 ripe avocado\n"
-                +"2 medium ripe bananas (previously sliced and frozen)\n"
-                +"1 cup fresh or frozen mixed berries (organic when possible // use strawberries/raspberries for a greener smoothie, darker berries for a purple smoothie)\n"
-                +"      2 large handfuls spinach (organic when possible)\n"
-                +"\n1 small handful kale (organic when possible // large stems removed)"
-                +"\n1 1/2 – 2 cups unsweetened non-dairy milk (DIY or store-bought – will depend on if your berries are frozen)"
-                +"\n1 Tbsp flaxseed meal"
-                +"\n2 Tbsp salted creamy almond or peanut butter (optional)"
+        recipeString = "Flourless Peanut Butter Cookies\n\nIngredients\n" +
 
-                +"\n\nTOPPINGS (optional)"
-
-                +"\nRoasted unsalted sunflower seeds"
-                +"\nGranola"
-                +"\nRaw or roasted nuts (almonds, pecans, walnuts, etc.)"
-                +"\nShredded unsweetened coconut"
-                +"\nFresh berries"
-                +"\nHemp seeds"
-
-                +"\n\nInstructions"
-
-                +"\nAdd all smoothie ingredients to a blender and blend until creamy and smooth. Add more almond milk (or water) to thin."
-                +"\nTaste and adjust flavor as needed, adding more ripe banana (or maple syrup) for added sweetness, more spinach for a bright green hue, or almond milk for creaminess."
-                +"\nFor the green smoothie, I used strawberries, which let the green color come through more. For the purple bowl, I used darker berries (raspberries, blackberries, blueberries)."
-                +"\nFor more protein, add nut butter! This also offsets / enhances the natural sweetness of the smoothie."
-                +"\nDivide between 2 serving bowls (as original recipe is written // adjust if altering batch size) and top with desired toppings!"
-                +"\nBest when fresh, though leftovers can be kept in jars in the fridge for up to 1-2 days.";
+                "Original recipe yields 12 servings\n" +
+                "Ingredient Checklist\n" +
+                "\n" +
+                "    1 cup peanut butter\n" +
+                "    ½ cup white sugar\n" +
+                "    ⅓ cup packed brown sugar\n" +
+                "    1 egg\n" +
+                "    1 teaspoon vanilla extract\n" +
+                "    ½ teaspoon baking soda\n" +
+                "    ½ cup semisweet chocolate chips (Optional)\n" +
+                "\n" +
+                "Directions\n" +
+                "Instructions Checklist\n" +
+                "\n" +
+                "    Step 1\n" +
+                "\n" +
+                "    Preheat oven to 350 degrees F (175 degrees C).\n" +
+                "    Step 2\n" +
+                "\n" +
+                "    Beat peanut butter, white sugar, and brown sugar together in a large bowl with an electric mixer until smooth. Stir egg, vanilla extract, and baking soda into peanut butter mixture; stir in chocolate chips.\n" +
+                "    Step 3\n" +
+                "\n" +
+                "    Drop mixture by small rounded spoonfuls onto a baking sheet about 2 inches apart.\n" +
+                "    Step 4\n" +
+                "\n" +
+                "    Bake in the preheated oven until cookies are flattened and golden, about 8 minutes.\n" +
+                "\n" +
+                "Cook's Note:\n" +
+                "\n" +
+                "Use either smooth or crunchy peanut butter.";
         recipeText = (TextView) findViewById(R.id.recipeText);
         recipeText.setText(recipeString);
 
