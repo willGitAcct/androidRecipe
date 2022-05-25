@@ -52,12 +52,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.textView.setText(data[position]);
         holder.imageView.setImageResource(images[position]);
         //holder.textView.setText(data[position]);
-        holder.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "clicked on this "+data[position], Toast.LENGTH_SHORT).show();
-            }
-        });
+//        holder.textView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(context, "clicked on this "+data[position], Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 //        holder.imageView.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -97,7 +97,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 public void onClick(View view) {
                     int newPosition = getAdapterPosition();
                     clicked.onClickedPic(newPosition);
-                    Toast.makeText(context, "clicked on this "+data[newPosition], Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "clicked on this "+data[newPosition], Toast.LENGTH_SHORT).show();
 
 
                 }
